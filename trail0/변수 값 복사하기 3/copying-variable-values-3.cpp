@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a = 1;
+    int b = 5;
+    int c = 3;
+
+    a = c;
+    a += c;
+    b -= c;
+
+    std::cout << a << '\n' << b << '\n' << c << '\n';
+
+    return 0;
+}
