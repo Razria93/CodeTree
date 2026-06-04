@@ -7,20 +7,15 @@ int main()
     std::cin >> start >> end;
 
     int count = 0;
-
     int prime[11] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 };
 
-    for (int i = start; i <= end; ++i)
+    for (int num : prime)
     {
-        for (int j = 0; j < sizeof(prime); ++j)
+        int square = num * num;
+
+        if (start <= square && end >= square)
         {
-            if (i < prime[j] * prime[j]) break;
-            
-            if (i == prime[j] * prime[j])
-            {
-                ++count;
-                break;
-            }
+            ++count;
         }
     }
 
